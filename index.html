@@ -1,270 +1,260 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayman Moussaid</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayman Moussaid</title>
-
-  <!--
+    <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
 
-  <!--
+    <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!--
+    <!--
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
-  <!--
+  <body>
+    <!--
     - #MAIN
   -->
 
-  <main>
-
-    <!--
+    <main>
+      <!--
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar>
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/pic.webp"
+              alt="Ayman Moussaid"
+              width="100"
+            />
+          </figure>
 
-      <div class="sidebar-info">
+          <div class="info-content">
+            <h1 class="name" title="Ayman Moussaid">Ayman Moussaid</h1>
 
-        <figure class="avatar-box">
-          <img src="./assets/images/pic.webp" alt="Ayman Moussaid" width="100">
-        </figure>
+            <p class="title">INGÉNIEUR EN INFORMATIQUE</p>
+            <p class="title" style="margin-top: 10px">
+              Dév. Full-Stack | Angular & Node.js
+            </p>
+          </div>
 
-        <div class="info-content">
-          <h1 class="name" title="Ayman Moussaid">Ayman Moussaid</h1>
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
 
-          <p class="title">INGÉNIEUR EN INFORMATIQUE </p>
-          <p class="title" style="margin-top: 10px;">Dév. Full-Stack | Angular & Node.js</p>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
 
-      </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
 
-      <div class="sidebar-info_more">
+                <a href="mailto:aymanmoussaid0@gmail.com" class="contact-link"
+                  >aymanmoussaid0@gmail.com</a
+                >
+              </div>
+            </li>
 
-        <div class="separator"></div>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
 
-        <ul class="contacts-list">
+              <div class="contact-info">
+                <p class="contact-title">Tel</p>
 
-          <li class="contact-item">
+                <a href="tel:+12133522795" class="contact-link"
+                  >06 84 07 54 40</a
+                >
+              </div>
+            </li>
 
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
 
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
+              <div class="contact-info">
+                <p class="contact-title">Anniversaire</p>
 
-              <a href="mailto:aymanmoussaid0@gmail.com" class="contact-link">aymanmoussaid0@gmail.com</a>
-            </div>
+                <time datetime="1982-06-23">31 Juillet 2001</time>
+              </div>
+            </li>
 
-          </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
 
-          <li class="contact-item">
+              <div class="contact-info">
+                <p class="contact-title">Adresse</p>
 
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
+                <address>Bouskoura, Casablanca</address>
+              </div>
+            </li>
+          </ul>
 
-            <div class="contact-info">
-              <p class="contact-title">Tel</p>
+          <div class="separator"></div>
 
-              <a href="tel:+12133522795" class="contact-link">06 84 07 54 40</a>
-            </div>
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                href="https://www.linkedin.com/in/ayman-moussaid-583736216/"
+                class="social-link"
+              >
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
 
-          </li>
+            <li class="social-item">
+              <a href="https://github.com/ayman-msd" class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
 
-          <li class="contact-item">
+            <li class="social-item">
+              <a href="https://gitlab.com/ayman_msd" class="social-link">
+                <ion-icon name="logo-gitlab"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
 
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Anniversaire</p>
-
-              <time datetime="1982-06-23">31 Juillet 2001</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Adresse</p>
-
-              <address>Bouskoura, Casablanca </address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/ayman-moussaid-583736216/" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/ayman-msd" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://gitlab.com/ayman_msd" class="social-link">
-              <ion-icon name="logo-gitlab"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-    <!--
+      <!--
       - #main-content
     -->
 
-    <div class="main-content">
-
-      <!--
+      <div class="main-content">
+        <!--
         - #NAVBAR
       -->
 
-      <nav class="navbar">
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>PROFIL</button>
+            </li>
 
-        <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>EXPÉRIENCES</button>
+            </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>PROFIL</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>EXPÉRIENCES</button>
-          </li>
-
-          <!--<li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>-->
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>CERTIFICATS</button>
-          </li>
-
-          <!-- <li class="navbar-item"> 
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>CERTIFICATS</button>
+            </li>
+            <!--<li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>-->
+            <!-- <li class="navbar-item"> 
             <button class="navbar-link" data-nav-link>Contact</button>
           </li>-->
+          </ul>
+        </nav>
 
-        </ul>
-
-      </nav>
-
-
-      <!--
+        <!--
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="profil">
+        <article class="about active" data-page="profil">
+          <header>
+            <h2 class="h2 article-title">PROFIL</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">PROFIL</h2>
-        </header>
+          <section class="about-text">
+            <p>
+              Développeur Full-Stack spécialisé en Angular & Node.js, avec une
+              expérience concrète ayant conçu et livré des solutions web
+              avancées (Gestion métier, Dashboards personnalisables et
+              interactifs, PDF dynamiques).
+            </p>
 
-        <section class="about-text">
-          <p>
-            Développeur Full-Stack spécialisé en Angular & Node.js, avec une expérience concrète
-		ayant conçu et livré des solutions web avancées (Gestion métier, Dashboards
-		personnalisables et interactifs, PDF dynamiques).
-          </p>
+            <p>Autonome, rigoureux, et force de proposition.</p>
 
-          <p>
-            Autonome, rigoureux, et force de proposition.
-          </p>
+            <p>
+              J’interviens de la conception technique à la livraison, en
+              garantissant performance, design et maintenabilité.
+            </p>
+          </section>
 
-          <p>
-            J’interviens de la conception technique à la livraison, en garantissant performance, design et maintenabilité.
-          </p>
-        </section>
-
-
-        <!--
+          <!--
           - service
         -->
 
-        <section class="service">
+          <section class="service">
+            <h3 class="h3 service-title">MES SERVICES</h3>
 
-          <h3 class="h3 service-title">MES SERVICES</h3>
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
 
-          <ul class="service-list">
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title" style="color: #ceb15a">Développement Web</h4>
 
-            <li class="service-item">
+                  <p class="service-item-text">
+                    Développement de sites web de haute qualité, réalisé au
+                    niveau professionnel.
+                  </p>
+                </div>
+              </li>
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design.svg
+                "
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Développement Web</h4>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title" style="color: #ceb15a">Web designe</h4>
 
-                <p class="service-item-text">
-                  Développement de sites web de haute qualité, réalisé au niveau professionnel.
-                </p>
-              </div>
+                  <p class="service-item-text">
+                    Un design des plus modernes et de haute qualité, réalisé par
+                    des professionnels.
+                  </p>
+                </div>
+              </li>
 
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web designe</h4>
-
-                <p class="service-item-text">
-                  Un design des plus modernes et de haute qualité, réalisé par des professionnels.
-                </p>
-              </div>
-
-            </li>
-
-            
-
-            <!-- <li class="service-item"> 
+              <!-- <li class="service-item"> 
 
               <div class="service-icon-box">
                 <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
@@ -280,7 +270,7 @@
 
             </li>-->
 
-            <!-- <li class="service-item"> 
+              <!-- <li class="service-item"> 
 
               <div class="service-icon-box">
                 <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
@@ -295,187 +285,178 @@
               </div>
 
             </li>-->
+            </ul>
+          </section>
 
-          </ul>
+          <section class="testimonials">
+            <h3 class="h3 testimonials-title">FORMATION</h3>
 
-        </section>
-        
+            <ul class="testimonials-list has-scrollbar">
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/emsi.png"
+                      alt="EMSI"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
 
-        <section class="testimonials">
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                    style="color: #ceb15a"
+                  >
+                    EMSI
+                  </h4>
 
-          <h3 class="h3 testimonials-title">FORMATION</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/emsi.png" alt="EMSI" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>EMSI</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Élève ingénieur en génie informatique et réseaux - Option 
-                    Méthodes informatiques appliquées à la gestion d'entreprise 
-                    (MIAGE). <br>
-                    Rabat
-                  </p>
-                  <time datetime="2018 - 2019">2019 - 2024</time>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Élève ingénieur en génie informatique et réseaux - Option
+                      Méthodes informatiques appliquées à la gestion
+                      d'entreprise (MIAGE). <br />
+                      Rabat
+                    </p>
+                    <time datetime="2018 - 2019">2019 - 2024</time>
+                  </div>
                 </div>
+              </li>
 
-              </div>
-            </li>
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/bac.png"
+                      alt="Jessica miller"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                    style="color: #ceb15a"
+                  >
+                    BAC
+                  </h4>
 
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/bac.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>Baccalauréat en sciences physiques</p>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>BAC</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Baccalauréat en sciences physiques 
-                  </p>
-
-                  <p>
-                    Meknes 
-                  </p>
-                  <time datetime="2018 - 2019">2018 - 2019</time>
+                    <p>Meknes</p>
+                    <time datetime="2018 - 2019">2018 - 2019</time>
+                  </div>
                 </div>
+              </li>
+            </ul>
+          </section>
 
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
+          <!--
           - testimonials modal
         -->
 
-        <div class="modal-container" data-modal-container>
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
 
-          <div class="overlay" data-overlay></div>
+            <section class="testimonials-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
 
-          <section class="testimonials-modal">
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/images/avatar-1.png"
+                    alt=""
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
 
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title></h4>
-
-              <div data-modal-text>
-                <p>
-                  
-                </p>
+                <img src="./assets/images/icon-quote.svg" alt="" />
               </div>
 
-            </div>
+              <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title></h4>
 
+                <div data-modal-text>
+                  <p></p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <section class="skill">
+            <h3 class="h3 skills-title">COMPÉTENCES</h3>
+
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Développement Web (Front) :</h5>
+                  <data value="90">90%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Développement Web (Back) :</h5>
+                  <data value="80">80%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">
+                    Expertise avancée dans les langages : C , C++ , JAVA ,
+                    PYTHON
+                  </h5>
+                  <data value="65"></data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 65%"></div>
+                </div>
+              </li>
+            </ul>
           </section>
 
-        </div>
-
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">COMPÉTENCES</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Développement Web (Front) :</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Développement Web (Back) :</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Expertise avancée dans les langages : C , C++ , JAVA , PYTHON</h5>
-                <data value="65"></data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
+          <!--
           - clients
         -->
 
-        <section class="clients" style="margin-top: 50px;">
+          <section class="clients" style="margin-top: 50px">
+            <h3 class="h3 clients-title">ENTREPRISES</h3>
 
-          <h3 class="h3 clients-title">ENTREPRISES</h3>
+            <ul class="clients-list has-scrollbar">
+              <li class="clients-item">
+                <a href="https://www.myteam.ma/">
+                  <img src="./assets/images/myteam.png" alt="client logo" />
+                </a>
+              </li>
 
-          <ul class="clients-list has-scrollbar">
+              <li class="clients-item">
+                <a href="https://cloudeco.fr/">
+                  <img src="./assets/images/CLOUDECO.png" alt="client logo" />
+                </a>
+              </li>
 
-            <li class="clients-item">
-              <a href="https://www.myteam.ma/">
-                <img src="./assets/images/myteam.png" alt="client logo">
-              </a>
-            </li>
+              <li class="clients-item">
+                <a href="https://www.sophatel.com/">
+                  <img src="./assets/images/SOPHATEL.png" alt="client logo" />
+                </a>
+              </li>
 
-            <li class="clients-item">
-              <a href="https://cloudeco.fr/">
-                <img src="./assets/images/CLOUDECO.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.sophatel.com/">
-                <img src="./assets/images/SOPHATEL.png" alt="client logo">
-              </a>
-            </li>
-
-
-            <!-- <li class="clients-item"> 
+              <!-- <li class="clients-item"> 
               <a href="#">
                 <img src="./assets/images/logo-4-color.png" alt="client logo">
               </a>
@@ -492,795 +473,832 @@
                 <img src="./assets/images/logo-6-color.png" alt="client logo">
               </a>
             </li>-->
+            </ul>
+          </section>
+        </article>
 
-          </ul>
-
-        </section>
-
-        
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #RESUME
       -->
 
-      <article class="resume" data-page="expériences">
+        <article class="resume" data-page="expériences">
+          <header>
+            <h2 class="h2 article-title">EXPÉRIENCES</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">EXPÉRIENCES</h2>
-        </header>
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="git-branch-outline"></ion-icon>
+              </div>
 
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="git-branch-outline"></ion-icon>
+              <h3 class="h3">EXPÉRIENCES PROFESSIONNELLES</h3>
             </div>
 
-            <h3 class="h3">EXPÉRIENCES PROFESSIONNELLES </h3>
-          </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title" style="color: #ceb15a">
+                  Développeur Full-Stack – CDI
+                </h4>
 
-          <ol class="timeline-list">
+                <span style="color: rgba(244, 244, 244, 0.443);margin-bottom: 7px;">MyTeam Solution - BOUSKOURA</span>
+                <p class="timeline-text">
+                  <span style="color: #e8d49c">- Développement complet du module de gestion detrésorerie:</span>
+                  (Front : Angular, Back : Node.js, DB : MySQL) avec
+                  authentification, suivi des paiements, statistiques et
+                  export.<br />
+                  <span style="color: #e8d49c">- Développement complet du module de location de terrain:</span>
+                  (Front & Back) depuis zéro, avec interface moderne, système de
+                  réservation, gestion des créneaux et historique.<br />
+                  <span style="color: #e8d49c">- Développement d’un dashboard modulaire personnalisable:</span>
+                  composants (widgets) repositionnables, redimensionnables et
+                  persistants selon chaque utilisateur.<br />
+                  <span style="color: #e8d49c">- Mise en place d'une solution avancée de génération de PDF:</span>
+                  plus de 35 PDF dynamiques avec PDFMake, intégrant des rendus
+                  professionnels stylisés pour remplacer les anciens formats
+                  basiques.<br/>
+                  <span style="color: #e8d49c">- Mise en place d’un système de traçage des requêtes SQL:</span>
+                  pour enregistrer l’identité de l’utilisateur, le type d’action
+                  (insert, update, delete) et la date/heure.<br />
+                  <span style="color: #e8d49c">- Refonte complète du module administratif:</span>
+                  modernisation des interfaces, meilleure expérience
+                  utilisateur, ajout de nombreuses fonctionnalités métier.<br/>
+                  Refonte du module BePro: avec création d’interfaces inspirées
+                  de SofaScore, intégration de données dynamiques et ajout de
+                  fonctionnalités statistiques.
+                </p>
+                <span style="text-align: end">Oct 2024 - Juin 2025</span>
+              </li>
 
-	    <li class="timeline-item">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title" style="color: #ceb15a">Projet de Fin d'Études</h4>
+                <span style="color: rgba(244, 244, 244, 0.443);margin-bottom: 7px;">Cloud Eco - CASABLANCA</span>
 
-              <h4 class="h4 timeline-item-title">Développeur Full-Stack – CDI</h4>
+                <p class="timeline-text">
+                  - Mise En Place D'une Platforme De Signature Électronique Des
+                  Documents <br />
+                  - API: DocusSign API <br />
+                  - Outils : ANGULAR - NESTJS - MONGODB
+                </p>
 
-              <span>My Team Solution - BOUSKOURA</span>
+                <span style="text-align: end">Mars 2024 - Sep 2024</span>
+              </li>
 
-              <p class="timeline-text">
-                <span style="color: #d1c6a9">- Développement complet du module de gestion de trésorerie:</span> (Front :
-		Angular, Back : Node.js, DB : MySQL) avec authentification, suivi des paiements,
-		statistiques et export.<br>
-		<span style="color: #d1c6a9">- Développement complet du module de location de terrain:</span> (Front & Back)
-		depuis zéro, avec interface moderne, système de réservation, gestion des
-		créneaux et historique.<br>
-		<span style="color: #d1c6a9">- Développement d’un dashboard modulaire personnalisable:</span> composants
-		(widgets) repositionnables, redimensionnables et persistants selon chaque
-		utilisateur.<br>
-		<span style="color: #d1c6a9">- Mise en place d'une solution avancée de génération de PDF:</span> plus de 35 PDF
-		dynamiques avec PDFMake, intégrant des rendus professionnels stylisés pour
-		remplacer les anciens formats basiques.<br>
-		<span style="color: #d1c6a9">- Mise en place d’un système de traçage des requêtes SQL:</span> pour enregistrer
-		l’identité de l’utilisateur, le type d’action (insert, update, delete) et la date/heure.<br>
-		<span style="color: #d1c6a9">- Refonte complète du module administratif:</span> modernisation des interfaces,
-		meilleure expérience utilisateur, ajout de nombreuses fonctionnalités métier.<br>
-		Refonte du module BePro: avec création d’interfaces inspirées de SofaScore,
-		intégration de données dynamiques et ajout de fonctionnalités statistiques.
-              </p>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title" style="color: #ceb15a">STAGE D'APPLICATION</h4>
+                <span style="color: rgba(244, 244, 244, 0.443);margin-bottom: 7px;">SOPHATEL - CASABLANCA </span>
 
-              <span style="text-align: end;">Oct 2024 - Juin 2025</span>
-            </li>
+                <p class="timeline-text">
+                  - Mise en place d'un système de gestion interne de SOPHATEL
+                  <br />
+                  - Module : gestion des demandes de congés <br />
+                  - Outils : ANGULAR - SPRINGBOOT - SQL
+                </p>
 
-            <li class="timeline-item">
+                <span style="text-align: end">Juil 2023 - Sep 2023</span>
+              </li>
 
-              <h4 class="h4 timeline-item-title">Projet de Fin d'Études</h4>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title" style="color: #ceb15a">STAGE D'APPLICATION</h4>
+                <span style="color: rgba(244, 244, 244, 0.443);margin-bottom: 7px;">SOPHATEL - CASABLANCA </span>
 
-              <span>Cloud Eco - CASABLANCA</span>
+                <p class="timeline-text">
+                  - Réalisation d'une application web de pointage des personnels
+                  <br />
+                  - Outils: ANGULAR
+                </p>
 
-              <p class="timeline-text">
-                - Mise En Place D'une Platforme De Signature Électronique Des Documents <br>
-                - API: DocusSign API <br>
-                - Outils : ANGULAR - NESTJS - MONGODB 
-              </p>
+                <span style="text-align: end">Juin 2022 - Juil 2022</span>
+              </li>
+            </ol>
+          </section>
 
-              <span style="text-align: end;">Mars 2024 - Sep 2024</span>
-            </li>
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">STAGE D'APPLICATION</h4>
-
-              <span>SOPHATEL - CASABLANCA </span>
-
-              <p class="timeline-text">
-                - Mise en place d'un système de gestion interne de SOPHATEL <br> 
-                - Module : gestion des demandes de congés <br>
-                - Outils : ANGULAR - SPRINGBOOT - SQL 
-              </p>
-
-              <span style="text-align: end;">Juil 2023 - Sep 2023</span>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">STAGE D'APPLICATION</h4>
-
-              <span>SOPHATEL - CASABLANCA </span>
-
-              <p class="timeline-text">     
-                - Réalisation d'une application web de pointage des personnels <br>
-                - Outils: ANGULAR 
-              </p>
-
-              <span style="text-align: end;">Juin 2022 - Juil 2022</span>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <h3 class="h3">PROJETS ACADÉMIQUES</h3>
             </div>
 
-            <h3 class="h3">PROJETS ACADÉMIQUES</h3>
-          </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Application Web: IA appliquée au processus de recrutement
+                </h4>
 
-          <ol class="timeline-list">
+                <span>Outils : ANGULAR - SPRINGBOOT - PYTHON </span>
+              </li>
 
-            <li class="timeline-item">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Application Web: Gestion des demandes de congés
+                </h4>
 
-              <h4 class="h4 timeline-item-title">Application Web: IA appliquée au processus de recrutement </h4>
+                <span>Outils : ANGULAR - SPRINGBOOT</span>
+              </li>
 
-              <span>Outils : ANGULAR - SPRINGBOOT - PYTHON </span>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Application Web: Gestion des risques d'une etreprise
+                </h4>
 
-            </li>
+                <span>Outils : ANGULAR - SPRINGBOOT </span>
+              </li>
 
-            <li class="timeline-item">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Application Web: Gestion d'un cabinet médicale
+                </h4>
 
-              <h4 class="h4 timeline-item-title">Application Web: Gestion des demandes de congés </h4>
+                <span>Outils : .Net - SQL</span>
+              </li>
 
-              <span>Outils : ANGULAR - SPRINGBOOT</span>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Application Scraping</h4>
 
-            </li>
+                <span>Outils : PYTHON </span>
+              </li>
+            </ol>
+          </section>
+        </article>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Application Web: Gestion des risques d'une etreprise </h4>
-
-              <span>Outils : ANGULAR - SPRINGBOOT </span>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Application Web: Gestion d'un cabinet médicale </h4>
-
-              <span>Outils : .Net - SQL</span>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Application Scraping</h4>
-
-              <span>Outils : PYTHON </span>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
               </li>
 
-              <li class="select-item">
-                <button data-select-item>Web design</button>
+              <li class="filter-item">
+                <button data-filter-btn>Web design</button>
               </li>
 
-              <li class="select-item">
-                <button data-select-item>Applications</button>
+              <li class="filter-item">
+                <button data-filter-btn>Applications</button>
               </li>
 
-              <li class="select-item">
-                <button data-select-item>Web development</button>
+              <li class="filter-item">
+                <button data-filter-btn>Web development</button>
               </li>
-
             </ul>
 
-          </div>
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>
+                  Select category
+                </div>
 
-          <ul class="project-list">
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                <li class="select-item">
+                  <button data-select-item>Web design</button>
+                </li>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
+                <li class="select-item">
+                  <button data-select-item>Applications</button>
+                </li>
 
-                <h3 class="project-title">Finance</h3>
+                <li class="select-item">
+                  <button data-select-item>Web development</button>
+                </li>
+              </ul>
+            </div>
 
-                <p class="project-category">Web development</p>
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-              </a>
-            </li>
+                    <img
+                      src="./assets/images/project-1.jpg"
+                      alt="finance"
+                      loading="lazy"
+                    />
+                  </figure>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+                  <h3 class="project-title">Finance</h3>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
 
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-                <h3 class="project-title">Orizon</h3>
+                    <img
+                      src="./assets/images/project-2.png"
+                      alt="orizon"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                <p class="project-category">Web development</p>
+                  <h3 class="project-title">Orizon</h3>
 
-              </a>
-            </li>
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                    <img
+                      src="./assets/images/project-3.jpg"
+                      alt="fundo"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
+                  <h3 class="project-title">Fundo</h3>
 
-                <h3 class="project-title">Fundo</h3>
+                  <p class="project-category">Web design</p>
+                </a>
+              </li>
 
-                <p class="project-category">Web design</p>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-              </a>
-            </li>
+                    <img
+                      src="./assets/images/project-4.png"
+                      alt="brawlhalla"
+                      loading="lazy"
+                    />
+                  </figure>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+                  <h3 class="project-title">Brawlhalla</h3>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
 
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-                <h3 class="project-title">Brawlhalla</h3>
+                    <img
+                      src="./assets/images/project-5.png"
+                      alt="dsm."
+                      loading="lazy"
+                    />
+                  </figure>
 
-                <p class="project-category">Applications</p>
+                  <h3 class="project-title">DSM.</h3>
 
-              </a>
-            </li>
+                  <p class="project-category">Web design</p>
+                </a>
+              </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                    <img
+                      src="./assets/images/project-6.png"
+                      alt="metaspark"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
+                  <h3 class="project-title">MetaSpark</h3>
 
-                <h3 class="project-title">DSM.</h3>
+                  <p class="project-category">Web design</p>
+                </a>
+              </li>
 
-                <p class="project-category">Web design</p>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-              </a>
-            </li>
+                    <img
+                      src="./assets/images/project-7.png"
+                      alt="summary"
+                      loading="lazy"
+                    />
+                  </figure>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+                  <h3 class="project-title">Summary</h3>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
 
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-                <h3 class="project-title">MetaSpark</h3>
+                    <img
+                      src="./assets/images/project-8.jpg"
+                      alt="task manager"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                <p class="project-category">Web design</p>
+                  <h3 class="project-title">Task Manager</h3>
 
-              </a>
-            </li>
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                    <img
+                      src="./assets/images/project-9.png"
+                      alt="arrival"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
+                  <h3 class="project-title">Arrival</h3>
 
-                <h3 class="project-title">Summary</h3>
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
 
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #certifs
       -->
 
-      <article class="blog" data-page="certificats">
+        <article class="blog" data-page="certificats">
+          <header>
+            <h2 class="h2 article-title">CERTIFICATS</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">CERTIFICATS</h2>
-        </header>
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/c1.png"
+                      alt="Design conferences in 2022"
+                      loading="lazy"
+                    />
+                  </figure>
 
-        <section class="blog-posts">
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">META</p>
 
-          <ul class="blog-posts-list">
+                      <span class="dot"></span>
 
-            <li class="blog-post-item">
-              <a href="#">
+                      <time datetime="2022-02-23">Fev 20, 2023</time>
+                    </div>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/c1.png" alt="Design conferences in 2022" loading="lazy">
-                </figure>
+                    <h3 class="h3 blog-item-title">Advanced React</h3>
 
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">META</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fev 20, 2023</time>
+                    <p class="blog-text">
+                      An online non-credit course authorized by Meta and offered
+                      through Coursera.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">Advanced React</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/c2.png"
+                      alt="Best fonts every designer"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    An online non-credit course authorized by Meta and offered through Coursera.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">IBM</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Mars 29, 2023</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">
+                      DevOps, Cloud, and Agile Foundations
+                    </h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/c2.png" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">IBM</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Mars 29, 2023</time>
+                    <p class="blog-text">
+                      In this Specialization, learners developed foundational
+                      knowledge in DevOps, including the culture, technology,
+                      and skils needed to succeed as a DevOps practitioner.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">DevOps, Cloud, and Agile Foundations</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/c3.png"
+                      alt="Design digest #80"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    In this Specialization, learners developed foundational knowledge in
-                    DevOps, including the culture, technology, and skils needed to
-                    succeed as a DevOps practitioner.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">IBM</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Fev 05, 2023</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">
+                      Developing Back-End Apps with Node.js and Express
+                    </h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/c3.png" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">IBM</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fev 05, 2023</time>
+                    <p class="blog-text">
+                      An online non-credit course authorized by IBM and offered
+                      through Coursera.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">Developing Back-End Apps with Node.js and
-                    Express</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/c4.png"
+                      alt="UI interactions of the week"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    An online non-credit course authorized by IBM and offered through Coursera.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">GOOGLE CLOUD</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Nov 25, 2023</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">
+                      Building Scalable Java Microservices with Spring Boot and
+                      Spring Cloud
+                    </h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/c4.png" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">GOOGLE CLOUD</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Nov 25, 2023</time>
+                    <p class="blog-text">
+                      An online non-credit course authorized by IBM and offered
+                      through Coursera.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">Building Scalable Java Microservices with Spring
-                    Boot and Spring Cloud</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/c5.png"
+                      alt="The forgotten art of spacing"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    An online non-credit course authorized by IBM and offered through Coursera.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">IBM</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Mars 29, 2023</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">
+                      Introduction to Agile Development and Scrum
+                    </h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/c5.png" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">IBM</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Mars 29, 2023</time>
+                    <p class="blog-text">
+                      An online non-credit course authorized by IBM and offered
+                      through Coursera.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">Introduction to Agile Development and Scrum</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/c6.png"
+                      alt="Design digest #79"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    An online non-credit course authorized by IBM and offered through Coursera.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">HKUST</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Jan 09, 2023</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">
+                      Front-End Web UI Frameworks and Tools: Bootstrap 4
+                    </h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/c6.png" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">HKUST</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Jan 09, 2023</time>
+                    <p class="blog-text">
+                      An online non-credit course authorized by IBM and offered
+                      through Coursera.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">Front-End Web UI Frameworks and Tools:
-                    Bootstrap 4</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/c7.png"
+                      alt="Design digest #79"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    An online non-credit course authorized by IBM and offered through Coursera.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">IBM</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Mars 28, 2023</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">
+                      Introduction to Cloud Computing
+                    </h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/c7.png" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">IBM</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Mars 28, 2023</time>
+                    <p class="blog-text">
+                      An online non-credit course authorized by IBM and offered
+                      through Coursera.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">Introduction to Cloud Computing</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/c8.png"
+                      alt="Design digest #79"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    An online non-credit course authorized by IBM and offered through Coursera.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">IBM</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Mars 27, 2023</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">Introduction to DevOps</h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/c8.png" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">IBM</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Mars 27, 2023</time>
+                    <p class="blog-text">
+                      An online non-credit course authorized by IBM and offered
+                      through Coursera.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">Introduction to DevOps</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/c9.png"
+                      alt="Design digest #79"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    An online non-credit course authorized by IBM and offered through Coursera.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">META</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Avr 04, 2023</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">React Native</h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/c9.png" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">META</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Avr 04, 2023</time>
+                    <p class="blog-text">
+                      An online non-credit course authorized by IBM and offered
+                      through Coursera.
+                    </p>
                   </div>
+                </a>
+              </li>
 
-                  <h3 class="h3 blog-item-title">React Native</h3>
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/c10.png"
+                      alt="Design digest #79"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                  <p class="blog-text">
-                    An online non-credit course authorized by IBM and offered through Coursera.
-                  </p>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">IBM</p>
 
-                </div>
+                      <span class="dot"></span>
 
-              </a>
-            </li>
+                      <time datetime="2022-02-23">Nov 24, 2023</time>
+                    </div>
 
-            <li class="blog-post-item">
-              <a href="#">
+                    <h3 class="h3 blog-item-title">
+                      Machine Learning with Python
+                    </h3>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/c10.png" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">IBM</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Nov 24, 2023</time>
+                    <p class="blog-text">
+                      An online non-credit course authorized by IBM and offered
+                      through Coursera.
+                    </p>
                   </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
 
-                  <h3 class="h3 blog-item-title">Machine Learning with Python</h3>
-
-                  <p class="blog-text">
-                    An online non-credit course authorized by IBM and offered through Coursera.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #CONTACT
       -->
 
-      <article class="contact" data-page="contact">
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+                width="400"
+                height="300"
+                loading="lazy"
+              ></iframe>
+            </figure>
+          </section>
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
 
-        <section class="contact-form">
+            <form action="#" class="form" data-form>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                  data-form-input
+                />
 
-          <h3 class="h3 form-title">Contact Form</h3>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                  data-form-input
+                />
+              </div>
 
-          <form action="#" class="form" data-form>
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+                data-form-input
+              ></textarea>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
-    </div>
-
-  </main>
-
-
-
-
-
-
-  <!--
+    <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 
-  <!--
+    <!--
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
