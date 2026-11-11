@@ -12,46 +12,9 @@ const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+sidebarBtn.addEventListener("click", function () {
+  sidebarBtn.setAttribute("aria-expanded", sidebar.classList.toggle("active"));
+});
 
 
 
@@ -136,24 +99,132 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
-// page navigation variables
+// Page navigation
+const navigation = document.querySelector(".navbar");
+const mainContent = navigation.parentElement;
+const sidebarDetails = sidebar.querySelector(".sidebar-info_more");
+const desktopLayout = window.matchMedia("(min-width: 900px)");
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
-  });
+function placeNavigation() {
+  const focusedLink = navigation.contains(document.activeElement) ? document.activeElement : null;
+  if (desktopLayout.matches) sidebarDetails.before(navigation);
+  else mainContent.prepend(navigation);
+  focusedLink?.focus({ preventScroll: true });
 }
+
+placeNavigation();
+desktopLayout.addEventListener("change", placeNavigation);
+
+function showPage(pageName) {
+  const target = [...pages].find(page => page.dataset.page === pageName);
+  if (!target) return;
+
+  pages.forEach(page => page.classList.toggle("active", page === target));
+  navigationLinks.forEach(link => {
+    const isCurrent = link.dataset.navLink === pageName;
+    link.classList.toggle("active", isCurrent);
+    if (isCurrent) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+
+  const heading = target.querySelector("h2");
+  heading.tabIndex = -1;
+  heading.focus({ preventScroll: true });
+  window.scrollTo(0, 0);
+}
+
+navigationLinks.forEach(link => {
+  link.addEventListener("click", () => showPage(link.dataset.navLink || link.textContent.trim().toLowerCase()));
+});
+
+document.querySelectorAll("[data-go-to]").forEach(button => {
+  button.addEventListener("click", () => showPage(button.dataset.goTo));
+});
+
+// Certificate and education details
+const detailDialog = document.querySelector(".detail-dialog");
+const detailTitle = detailDialog.querySelector("#detail-title");
+const detailMeta = detailDialog.querySelector(".detail-meta");
+const detailDescription = detailDialog.querySelector(".detail-description");
+const detailPreview = detailDialog.querySelector(".detail-preview");
+const detailOriginal = detailDialog.querySelector(".detail-original");
+
+function showDetails({ title, meta, description, image, original }) {
+  detailTitle.textContent = title;
+  detailMeta.textContent = meta;
+  detailDescription.textContent = description;
+  detailPreview.alt = original ? `Certificat : ${title}` : "";
+  detailPreview.src = image;
+  detailPreview.classList.toggle("detail-logo", !original);
+  if (original) detailOriginal.href = original;
+  else detailOriginal.removeAttribute("href");
+  detailOriginal.hidden = !original;
+  detailDialog.showModal();
+  detailDialog.scrollTop = 0;
+}
+
+document.querySelectorAll(".blog-post-item > a").forEach(link => {
+  link.addEventListener("click", event => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||
+        typeof detailDialog.showModal !== "function") return;
+
+    event.preventDefault();
+    const title = link.querySelector(".blog-item-title").textContent.trim().replace(/\s+/g, " ");
+    const issuer = link.querySelector(".blog-category").textContent;
+    const date = link.querySelector("time").textContent;
+    showDetails({
+      title,
+      meta: `${issuer} · Coursera · ${date}`,
+      description: link.querySelector(".blog-text").textContent.trim().replace(/\s+/g, " "),
+      image: link.href,
+      original: link.href
+    });
+  });
+});
+
+document.querySelectorAll(".formation-trigger").forEach(button => {
+  button.addEventListener("click", () => {
+    const card = button.closest(".content-card");
+    showDetails({
+      title: button.textContent,
+      meta: card.querySelector(".formation-meta").textContent,
+      description: card.querySelector(".formation-description").textContent,
+      image: card.querySelector(".testimonials-avatar-box img").src
+    });
+  });
+});
+
+detailDialog.addEventListener("click", event => {
+  if (event.target !== detailDialog) return;
+  const { left, right, top, bottom } = detailDialog.getBoundingClientRect();
+  if (event.clientX < left || event.clientX > right || event.clientY < top || event.clientY > bottom) {
+    detailDialog.close();
+  }
+});
+
+// The market-inspired graphic follows fine pointers within the hero.
+const hero = document.querySelector("[data-hero]");
+const reactiveMotion = window.matchMedia("(min-width: 641px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)");
+let pointerFrame = 0;
+
+function resetHeroMotion() {
+  cancelAnimationFrame(pointerFrame);
+  hero.style.removeProperty("--hero-x");
+  hero.style.removeProperty("--hero-y");
+}
+
+hero.addEventListener("pointermove", event => {
+  if (!reactiveMotion.matches || event.pointerType === "touch") return;
+
+  cancelAnimationFrame(pointerFrame);
+  pointerFrame = requestAnimationFrame(() => {
+    const bounds = hero.getBoundingClientRect();
+    hero.style.setProperty("--hero-x", ((event.clientX - bounds.left) / bounds.width - .5) * 26 + "px");
+    hero.style.setProperty("--hero-y", ((event.clientY - bounds.top) / bounds.height - .5) * 26 + "px");
+  });
+});
+
+hero.addEventListener("pointerleave", resetHeroMotion);
+reactiveMotion.addEventListener("change", resetHeroMotion);

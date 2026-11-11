@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ayman Moussaid</title>
+    <title>Ayman Moussaid | Développeur Full-Stack</title>
 
     <!--
     - favicon
@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -60,14 +60,16 @@
             </p>
           </div>
 
-          <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
+          <button class="info_more-btn" type="button" aria-label="Coordonnées" aria-expanded="false" aria-controls="coordonnees" data-sidebar-btn>
+            <span>Coordonnées</span>
 
-            <ion-icon name="chevron-down"></ion-icon>
+            <svg class="contact-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </button>
         </div>
 
-        <div class="sidebar-info_more">
+        <div class="sidebar-info_more" id="coordonnees">
           <div class="separator"></div>
 
           <ul class="contacts-list">
@@ -93,7 +95,7 @@
               <div class="contact-info">
                 <p class="contact-title">Tel</p>
 
-                <a href="tel:+12133522795" class="contact-link"
+                <a href="tel:+212684075440" class="contact-link"
                   >06 84 07 54 40</a
                 >
               </div>
@@ -107,7 +109,7 @@
               <div class="contact-info">
                 <p class="contact-title">Anniversaire</p>
 
-                <time datetime="1982-06-23">31 Juillet 2001</time>
+                <time datetime="2001-07-31">31 Juillet 2001</time>
               </div>
             </li>
 
@@ -130,21 +132,21 @@
             <li class="social-item">
               <a
                 href="https://www.linkedin.com/in/ayman-moussaid-583736216/"
-                class="social-link"
+                class="social-link" aria-label="LinkedIn"
               >
-                <ion-icon name="logo-linkedin"></ion-icon>
+                <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
               </a>
             </li>
 
             <li class="social-item">
-              <a href="https://github.com/ayman-msd" class="social-link">
-                <ion-icon name="logo-github"></ion-icon>
+              <a href="https://github.com/ayman-msd" class="social-link" aria-label="GitHub">
+                <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
               </a>
             </li>
 
             <li class="social-item">
-              <a href="https://gitlab.com/ayman_msd" class="social-link">
-                <ion-icon name="logo-gitlab"></ion-icon>
+              <a href="https://gitlab.com/ayman_msd" class="social-link" aria-label="GitLab">
+                <ion-icon name="logo-gitlab" aria-hidden="true"></ion-icon>
               </a>
             </li>
           </ul>
@@ -160,18 +162,36 @@
         - #NAVBAR
       -->
 
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navigation principale">
           <ul class="navbar-list">
             <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>PROFIL</button>
+              <button class="navbar-link active" type="button" aria-current="page" data-nav-link="profil">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="3.25" />
+                  <path d="M5 20v-1a7 7 0 0 1 14 0v1" />
+                </svg>
+                Profil
+              </button>
             </li>
 
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>EXPÉRIENCES</button>
+              <button class="navbar-link" type="button" data-nav-link="expériences">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="7" width="18" height="13" rx="3" />
+                  <path d="M8 7V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2M3 13h18m-9-1v3" />
+                </svg>
+                Expériences
+              </button>
             </li>
 
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>CERTIFICATS</button>
+              <button class="navbar-link" type="button" data-nav-link="certificats">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="9" r="5.5" />
+                  <path d="m8.5 13.25-2 7 5.5-2.5 5.5 2.5-2-7M10 9l1.5 1.5L14 8" />
+                </svg>
+                Certificats
+              </button>
             </li>
             <!--<li class="navbar-item">
               <button class="navbar-link" data-nav-link>Portfolio</button>
@@ -187,24 +207,58 @@
       -->
 
         <article class="about active" data-page="profil">
-          <header>
-            <h2 class="h2 article-title">PROFIL</h2>
+          <header class="profile-hero" data-hero>
+            <svg class="hero-graphic" viewBox="0 0 420 410" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="line-ink" x2="1" y2="1">
+                  <stop stop-color="#a4ccec" stop-opacity=".2" />
+                  <stop offset="1" stop-color="#ccd0cf" stop-opacity=".8" />
+                </linearGradient>
+                <radialGradient id="lens-surface" cx=".65" cy=".22" r=".78">
+                  <stop stop-color="#ddf1ff" stop-opacity=".72" />
+                  <stop offset=".36" stop-color="#a4ccec" stop-opacity=".2" />
+                  <stop offset=".76" stop-color="#132e43" stop-opacity=".3" />
+                  <stop offset="1" stop-color="#afd8f6" stop-opacity=".46" />
+                </radialGradient>
+                <linearGradient id="lens-edge" x1=".15" y1="0" x2=".88" y2="1">
+                  <stop stop-color="#ebf7ff" stop-opacity=".92" />
+                  <stop offset=".47" stop-color="#a4ccec" stop-opacity=".15" />
+                  <stop offset="1" stop-color="#bfdef5" stop-opacity=".72" />
+                </linearGradient>
+              </defs>
+              <ellipse cx="255" cy="206" rx="139" ry="153" transform="rotate(35 255 206)" fill="url(#lens-surface)" stroke="url(#lens-edge)" stroke-width="2" />
+              <g class="hero-contours" fill="none" stroke="url(#line-ink)">
+                <ellipse cx="255" cy="206" rx="139" ry="153" transform="rotate(35 255 206)" />
+                <ellipse cx="255" cy="206" rx="118" ry="153" transform="rotate(35 255 206)" />
+                <ellipse cx="255" cy="206" rx="95" ry="153" transform="rotate(35 255 206)" />
+                <ellipse cx="255" cy="206" rx="70" ry="153" transform="rotate(35 255 206)" />
+                <ellipse cx="255" cy="206" rx="43" ry="153" transform="rotate(35 255 206)" />
+              </g>
+              <g class="hero-route">
+                <path d="M62 297 128 245 178 259 238 163 287 187 361 97" fill="none" stroke="#ccd0cf" stroke-width="2" pathLength="1" />
+                <g fill="#ccd0cf">
+                  <circle cx="128" cy="245" r="4" />
+                  <circle cx="178" cy="259" r="4" />
+                  <circle cx="238" cy="163" r="5" />
+                  <circle cx="287" cy="187" r="4" />
+                  <circle cx="361" cy="97" r="6" />
+                </g>
+                <circle cx="361" cy="97" r="13" fill="none" stroke="#ccd0cf" opacity=".55" />
+              </g>
+            </svg>
+            <div class="hero-copy">
+              <h2>Développeur<br />Full-Stack<span></span></h2>
+              <p>spécialisé en Angular &amp; Node.js, avec une expérience concrète ayant conçu et livré des solutions web avancées.</p>
+              <p>Autonome, rigoureux, et force de proposition.</p>
+              <div class="hero-actions">
+                <button type="button" class="primary-action" data-go-to="expériences">Voir mes expériences <span aria-hidden="true">↗</span></button>
+                <a href="mailto:aymanmoussaid0@gmail.com" class="secondary-action">Me contacter</a>
+              </div>
+            </div>
           </header>
 
-          <section class="about-text">
-            <p>
-              Développeur Full-Stack spécialisé en Angular & Node.js, avec une
-              expérience concrète ayant conçu et livré des solutions web
-              avancées (Gestion métier, Dashboards personnalisables et
-              interactifs, PDF dynamiques).
-            </p>
-
-            <p>Autonome, rigoureux, et force de proposition.</p>
-
-            <p>
-              J’interviens de la conception technique à la livraison, en
-              garantissant performance, design et maintenabilité.
-            </p>
+          <section class="about-text" aria-label="À propos">
+            <p>J’interviens de la conception technique à la livraison, avec une attention particulière à la performance, au design et à la maintenabilité. J’ai notamment développé des tableaux de bord personnalisables et des solutions de génération de PDF dynamiques.</p>
           </section>
 
           <!--
@@ -225,7 +279,7 @@
                 </div>
 
                 <div class="service-content-box">
-                  <h4 class="h4 service-item-title" style="color: #ceb15a">Développement Web</h4>
+                  <h4 class="h4 service-item-title">Développement Web</h4>
 
                   <p class="service-item-text">
                     Développement de sites web de haute qualité, réalisé au
@@ -237,19 +291,18 @@
               <li class="service-item">
                 <div class="service-icon-box">
                   <img
-                    src="./assets/images/icon-design.svg
-                "
-                    alt="design icon"
+                    src="./assets/images/icon-design.svg"
+                    alt=""
                     width="40"
                   />
                 </div>
 
                 <div class="service-content-box">
-                  <h4 class="h4 service-item-title" style="color: #ceb15a">Web designe</h4>
+                  <h4 class="h4 service-item-title">Autonomie et rigueur technique</h4>
 
                   <p class="service-item-text">
-                    Un design des plus modernes et de haute qualité, réalisé par
-                    des professionnels.
+                    De la conception à la livraison.<br />
+                    Du code clair et maintenable.
                   </p>
                 </div>
               </li>
@@ -293,100 +346,38 @@
 
             <ul class="testimonials-list has-scrollbar">
               <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
+                <div class="content-card">
                   <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/emsi.png"
-                      alt="EMSI"
-                      width="60"
-                      data-testimonials-avatar
-                    />
+                    <img src="./assets/images/emsi.png" alt="" width="60" />
                   </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                    style="color: #ceb15a"
-                  >
-                    EMSI
+                  <h4 class="h4 testimonials-item-title">
+                    <button class="formation-trigger" type="button" aria-haspopup="dialog">EMSI</button>
                   </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Élève ingénieur en génie informatique et réseaux - Option
-                      Méthodes informatiques appliquées à la gestion
-                      d'entreprise (MIAGE). <br />
-                      Rabat
-                    </p>
-                    <time datetime="2018 - 2019">2019 - 2024</time>
+                  <div class="testimonials-text">
+                    <p class="formation-description">Élève ingénieur en génie informatique et réseaux, option Méthodes informatiques appliquées à la gestion d’entreprise (MIAGE).</p>
+                    <p class="formation-meta">Rabat · 2019–2024</p>
                   </div>
+                  <span class="detail-card-action" aria-hidden="true">Voir la formation</span>
                 </div>
               </li>
 
               <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
+                <div class="content-card">
                   <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/bac.png"
-                      alt="Jessica miller"
-                      width="60"
-                      data-testimonials-avatar
-                    />
+                    <img src="./assets/images/bac.png" alt="" width="60" />
                   </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                    style="color: #ceb15a"
-                  >
-                    BAC
+                  <h4 class="h4 testimonials-item-title">
+                    <button class="formation-trigger" type="button" aria-haspopup="dialog">BAC</button>
                   </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>Baccalauréat en sciences physiques</p>
-
-                    <p>Meknes</p>
-                    <time datetime="2018 - 2019">2018 - 2019</time>
+                  <div class="testimonials-text">
+                    <p class="formation-description">Baccalauréat en sciences physiques</p>
+                    <p class="formation-meta">Meknès · 2018–2019</p>
                   </div>
+                  <span class="detail-card-action" aria-hidden="true">Voir la formation</span>
                 </div>
               </li>
             </ul>
           </section>
-
-          <!--
-          - testimonials modal
-        -->
-
-          <div class="modal-container" data-modal-container>
-            <div class="overlay" data-overlay></div>
-
-            <section class="testimonials-modal">
-              <button class="modal-close-btn" data-modal-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-
-              <div class="modal-img-wrapper">
-                <figure class="modal-avatar-box">
-                  <img
-                    src="./assets/images/avatar-1.png"
-                    alt=""
-                    width="80"
-                    data-modal-img
-                  />
-                </figure>
-
-                <img src="./assets/images/icon-quote.svg" alt="" />
-              </div>
-
-              <div class="modal-content">
-                <h4 class="h3 modal-title" data-modal-title></h4>
-
-                <div data-modal-text>
-                  <p></p>
-                </div>
-              </div>
-            </section>
-          </div>
 
           <section class="skill">
             <h3 class="h3 skills-title">COMPÉTENCES</h3>
@@ -437,7 +428,22 @@
           <section class="clients" style="margin-top: 50px">
             <h3 class="h3 clients-title">ENTREPRISES</h3>
 
+            <svg class="company-logo-filters" width="0" height="0" aria-hidden="true" focusable="false">
+              <defs>
+                <filter id="company-logo-blue" color-interpolation-filters="sRGB">
+                  <feFlood />
+                  <feComposite in2="SourceAlpha" operator="in" />
+                </filter>
+              </defs>
+            </svg>
+
             <ul class="clients-list has-scrollbar">
+              <li class="clients-item">
+                <a class="company-logo" href="https://sctech.ma/">
+                  <img src="./assets/images/sctech.png" alt="SCTech" width="1866" height="697" loading="lazy" />
+                </a>
+              </li>
+
               <li class="clients-item">
                 <a href="https://www.myteam.ma/">
                   <img src="./assets/images/myteam.png" alt="client logo" />
@@ -497,42 +503,55 @@
 
             <ol class="timeline-list">
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title" style="color: #ceb15a">
+                <h4 class="h4 timeline-item-title">Développeur Frontend Angular – CDD</h4>
+                <p class="timeline-company">SCTech · Casablanca</p>
+                <p class="timeline-text">Conception et développement du frontend Angular 20 d’une plateforme de gestion de portefeuilles boursiers pour la Bourse de Casablanca.</p>
+                <ul class="role-details timeline-text">
+                  <li>Architecture Angular avec composants autonomes, services HTTP typés, intercepteur JWT avec renouvellement automatique, guards d’authentification, signals et forkJoin.</li>
+                  <li>Intégration des API REST Django, avec authentification JWT et opérations CRUD pour les entités métier.</li>
+                  <li>Historique d’audit et restauration des données via des composants partagés.</li>
+                  <li>Structuration en conteneurs et composants réutilisables, avec documentation des conventions de développement.</li>
+                </ul>
+                <p class="role-date"><time datetime="2026-03">Mars 2026</time> – <time datetime="2026-10">Octobre 2026</time></p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
                   Développeur Full-Stack – CDI
                 </h4>
 
-                <span style="color: rgba(244, 244, 244, 0.443);margin-bottom: 7px;">MyTeam Solution - BOUSKOURA</span>
+                <span class="timeline-company">MyTeam Solution - BOUSKOURA</span>
                 <p class="timeline-text">
-                  <span style="color: #e8d49c">- Développement complet du module de gestion detrésorerie:</span>
+                  <span>- Développement complet du module de gestion de trésorerie:</span>
                   (Front : Angular, Back : Node.js, DB : MySQL) avec
                   authentification, suivi des paiements, statistiques et
                   export.<br />
-                  <span style="color: #e8d49c">- Développement complet du module de location de terrain:</span>
+                  <span>- Développement complet du module de location de terrain:</span>
                   (Front & Back) depuis zéro, avec interface moderne, système de
                   réservation, gestion des créneaux et historique.<br />
-                  <span style="color: #e8d49c">- Développement d’un dashboard modulaire personnalisable:</span>
+                  <span>- Développement d’un dashboard modulaire personnalisable:</span>
                   composants (widgets) repositionnables, redimensionnables et
                   persistants selon chaque utilisateur.<br />
-                  <span style="color: #e8d49c">- Mise en place d'une solution avancée de génération de PDF:</span>
+                  <span>- Mise en place d'une solution avancée de génération de PDF:</span>
                   plus de 35 PDF dynamiques avec PDFMake, intégrant des rendus
                   professionnels stylisés pour remplacer les anciens formats
                   basiques.<br/>
-                  <span style="color: #e8d49c">- Mise en place d’un système de traçage des requêtes SQL:</span>
+                  <span>- Mise en place d’un système de traçage des requêtes SQL:</span>
                   pour enregistrer l’identité de l’utilisateur, le type d’action
                   (insert, update, delete) et la date/heure.<br />
-                  <span style="color: #e8d49c">- Refonte complète du module administratif:</span>
+                  <span>- Refonte complète du module administratif:</span>
                   modernisation des interfaces, meilleure expérience
                   utilisateur, ajout de nombreuses fonctionnalités métier.<br/>
                   Refonte du module BePro: avec création d’interfaces inspirées
                   de SofaScore, intégration de données dynamiques et ajout de
                   fonctionnalités statistiques.
                 </p>
-                <span style="text-align: end">Oct 2024 - Juin 2025</span>
+                <span style="text-align: end">Oct 2024 - Juil 2025</span>
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title" style="color: #ceb15a">Projet de Fin d'Études</h4>
-                <span style="color: rgba(244, 244, 244, 0.443);margin-bottom: 7px;">Cloud Eco - CASABLANCA</span>
+                <h4 class="h4 timeline-item-title">Projet de Fin d'Études</h4>
+                <span class="timeline-company">Cloud Eco - CASABLANCA</span>
 
                 <p class="timeline-text">
                   - Mise En Place D'une Platforme De Signature Électronique Des
@@ -545,8 +564,8 @@
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title" style="color: #ceb15a">STAGE D'APPLICATION</h4>
-                <span style="color: rgba(244, 244, 244, 0.443);margin-bottom: 7px;">SOPHATEL - CASABLANCA </span>
+                <h4 class="h4 timeline-item-title">STAGE D'APPLICATION</h4>
+                <span class="timeline-company">SOPHATEL - CASABLANCA </span>
 
                 <p class="timeline-text">
                   - Mise en place d'un système de gestion interne de SOPHATEL
@@ -559,8 +578,8 @@
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title" style="color: #ceb15a">STAGE D'APPLICATION</h4>
-                <span style="color: rgba(244, 244, 244, 0.443);margin-bottom: 7px;">SOPHATEL - CASABLANCA </span>
+                <h4 class="h4 timeline-item-title">STAGE D'APPLICATION</h4>
+                <span class="timeline-company">SOPHATEL - CASABLANCA </span>
 
                 <p class="timeline-text">
                   - Réalisation d'une application web de pointage des personnels
@@ -914,11 +933,11 @@
           <section class="blog-posts">
             <ul class="blog-posts-list">
               <li class="blog-post-item">
-                <a href="#">
+                <a href="./assets/images/c1.png" aria-haspopup="dialog">
                   <figure class="blog-banner-box">
                     <img
                       src="./assets/images/c1.png"
-                      alt="Design conferences in 2022"
+                      alt=""
                       loading="lazy"
                     />
                   </figure>
@@ -929,7 +948,7 @@
 
                       <span class="dot"></span>
 
-                      <time datetime="2022-02-23">Fev 20, 2023</time>
+                      <time datetime="2023-02-20">20 février 2023</time>
                     </div>
 
                     <h3 class="h3 blog-item-title">Advanced React</h3>
@@ -938,16 +957,17 @@
                       An online non-credit course authorized by Meta and offered
                       through Coursera.
                     </p>
+                    <span class="detail-card-action">Voir le certificat</span>
                   </div>
                 </a>
               </li>
 
               <li class="blog-post-item">
-                <a href="#">
+                <a href="./assets/images/c2.png" aria-haspopup="dialog">
                   <figure class="blog-banner-box">
                     <img
                       src="./assets/images/c2.png"
-                      alt="Best fonts every designer"
+                      alt=""
                       loading="lazy"
                     />
                   </figure>
@@ -958,7 +978,7 @@
 
                       <span class="dot"></span>
 
-                      <time datetime="2022-02-23">Mars 29, 2023</time>
+                      <time datetime="2023-03-29">29 mars 2023</time>
                     </div>
 
                     <h3 class="h3 blog-item-title">
@@ -966,20 +986,19 @@
                     </h3>
 
                     <p class="blog-text">
-                      In this Specialization, learners developed foundational
-                      knowledge in DevOps, including the culture, technology,
-                      and skils needed to succeed as a DevOps practitioner.
+                      Spécialisation IBM proposée sur Coursera. Elle regroupe trois cours sur le DevOps, le cloud et les méthodes agiles, dont Scrum.
                     </p>
+                    <span class="detail-card-action">Voir le certificat</span>
                   </div>
                 </a>
               </li>
 
               <li class="blog-post-item">
-                <a href="#">
+                <a href="./assets/images/c3.png" aria-haspopup="dialog">
                   <figure class="blog-banner-box">
                     <img
                       src="./assets/images/c3.png"
-                      alt="Design digest #80"
+                      alt=""
                       loading="lazy"
                     />
                   </figure>
@@ -990,7 +1009,7 @@
 
                       <span class="dot"></span>
 
-                      <time datetime="2022-02-23">Fev 05, 2023</time>
+                      <time datetime="2023-02-05">5 février 2023</time>
                     </div>
 
                     <h3 class="h3 blog-item-title">
@@ -1001,16 +1020,17 @@
                       An online non-credit course authorized by IBM and offered
                       through Coursera.
                     </p>
+                    <span class="detail-card-action">Voir le certificat</span>
                   </div>
                 </a>
               </li>
 
               <li class="blog-post-item">
-                <a href="#">
+                <a href="./assets/images/c4.png" aria-haspopup="dialog">
                   <figure class="blog-banner-box">
                     <img
                       src="./assets/images/c4.png"
-                      alt="UI interactions of the week"
+                      alt=""
                       loading="lazy"
                     />
                   </figure>
@@ -1021,7 +1041,7 @@
 
                       <span class="dot"></span>
 
-                      <time datetime="2022-02-23">Nov 25, 2023</time>
+                      <time datetime="2023-11-25">25 novembre 2023</time>
                     </div>
 
                     <h3 class="h3 blog-item-title">
@@ -1030,19 +1050,19 @@
                     </h3>
 
                     <p class="blog-text">
-                      An online non-credit course authorized by IBM and offered
-                      through Coursera.
+                      Cours en ligne proposé par Google Cloud sur Coursera.
                     </p>
+                    <span class="detail-card-action">Voir le certificat</span>
                   </div>
                 </a>
               </li>
 
               <li class="blog-post-item">
-                <a href="#">
+                <a href="./assets/images/c5.png" aria-haspopup="dialog">
                   <figure class="blog-banner-box">
                     <img
                       src="./assets/images/c5.png"
-                      alt="The forgotten art of spacing"
+                      alt=""
                       loading="lazy"
                     />
                   </figure>
@@ -1053,7 +1073,7 @@
 
                       <span class="dot"></span>
 
-                      <time datetime="2022-02-23">Mars 29, 2023</time>
+                      <time datetime="2023-03-29">29 mars 2023</time>
                     </div>
 
                     <h3 class="h3 blog-item-title">
@@ -1064,16 +1084,17 @@
                       An online non-credit course authorized by IBM and offered
                       through Coursera.
                     </p>
+                    <span class="detail-card-action">Voir le certificat</span>
                   </div>
                 </a>
               </li>
 
               <li class="blog-post-item">
-                <a href="#">
+                <a href="./assets/images/c6.png" aria-haspopup="dialog">
                   <figure class="blog-banner-box">
                     <img
                       src="./assets/images/c6.png"
-                      alt="Design digest #79"
+                      alt=""
                       loading="lazy"
                     />
                   </figure>
@@ -1084,7 +1105,7 @@
 
                       <span class="dot"></span>
 
-                      <time datetime="2022-02-23">Jan 09, 2023</time>
+                      <time datetime="2023-01-09">9 janvier 2023</time>
                     </div>
 
                     <h3 class="h3 blog-item-title">
@@ -1092,19 +1113,19 @@
                     </h3>
 
                     <p class="blog-text">
-                      An online non-credit course authorized by IBM and offered
-                      through Coursera.
+                      Cours en ligne proposé par l’Université des sciences et technologies de Hong Kong (HKUST) sur Coursera.
                     </p>
+                    <span class="detail-card-action">Voir le certificat</span>
                   </div>
                 </a>
               </li>
 
               <li class="blog-post-item">
-                <a href="#">
+                <a href="./assets/images/c7.png" aria-haspopup="dialog">
                   <figure class="blog-banner-box">
                     <img
                       src="./assets/images/c7.png"
-                      alt="Design digest #79"
+                      alt=""
                       loading="lazy"
                     />
                   </figure>
@@ -1115,7 +1136,7 @@
 
                       <span class="dot"></span>
 
-                      <time datetime="2022-02-23">Mars 28, 2023</time>
+                      <time datetime="2023-03-28">28 mars 2023</time>
                     </div>
 
                     <h3 class="h3 blog-item-title">
@@ -1126,16 +1147,17 @@
                       An online non-credit course authorized by IBM and offered
                       through Coursera.
                     </p>
+                    <span class="detail-card-action">Voir le certificat</span>
                   </div>
                 </a>
               </li>
 
               <li class="blog-post-item">
-                <a href="#">
+                <a href="./assets/images/c8.png" aria-haspopup="dialog">
                   <figure class="blog-banner-box">
                     <img
                       src="./assets/images/c8.png"
-                      alt="Design digest #79"
+                      alt=""
                       loading="lazy"
                     />
                   </figure>
@@ -1146,7 +1168,7 @@
 
                       <span class="dot"></span>
 
-                      <time datetime="2022-02-23">Mars 27, 2023</time>
+                      <time datetime="2023-03-27">27 mars 2023</time>
                     </div>
 
                     <h3 class="h3 blog-item-title">Introduction to DevOps</h3>
@@ -1155,16 +1177,17 @@
                       An online non-credit course authorized by IBM and offered
                       through Coursera.
                     </p>
+                    <span class="detail-card-action">Voir le certificat</span>
                   </div>
                 </a>
               </li>
 
               <li class="blog-post-item">
-                <a href="#">
+                <a href="./assets/images/c9.png" aria-haspopup="dialog">
                   <figure class="blog-banner-box">
                     <img
                       src="./assets/images/c9.png"
-                      alt="Design digest #79"
+                      alt=""
                       loading="lazy"
                     />
                   </figure>
@@ -1175,25 +1198,25 @@
 
                       <span class="dot"></span>
 
-                      <time datetime="2022-02-23">Avr 04, 2023</time>
+                      <time datetime="2023-04-04">4 avril 2023</time>
                     </div>
 
                     <h3 class="h3 blog-item-title">React Native</h3>
 
                     <p class="blog-text">
-                      An online non-credit course authorized by IBM and offered
-                      through Coursera.
+                      Cours en ligne proposé par Meta sur Coursera.
                     </p>
+                    <span class="detail-card-action">Voir le certificat</span>
                   </div>
                 </a>
               </li>
 
               <li class="blog-post-item">
-                <a href="#">
+                <a href="./assets/images/c10.png" aria-haspopup="dialog">
                   <figure class="blog-banner-box">
                     <img
                       src="./assets/images/c10.png"
-                      alt="Design digest #79"
+                      alt=""
                       loading="lazy"
                     />
                   </figure>
@@ -1204,7 +1227,7 @@
 
                       <span class="dot"></span>
 
-                      <time datetime="2022-02-23">Nov 24, 2023</time>
+                      <time datetime="2023-11-24">24 novembre 2023</time>
                     </div>
 
                     <h3 class="h3 blog-item-title">
@@ -1212,14 +1235,15 @@
                     </h3>
 
                     <p class="blog-text">
-                      An online non-credit course authorized by IBM and offered
-                      through Coursera.
+                      Cours en ligne proposé par IBM sur Coursera, terminé avec mention.
                     </p>
+                    <span class="detail-card-action">Voir le certificat</span>
                   </div>
                 </a>
               </li>
             </ul>
           </section>
+
         </article>
 
         <!--
@@ -1283,6 +1307,23 @@
         </article>
       </div>
     </main>
+
+    <dialog class="detail-dialog" aria-labelledby="detail-title">
+      <header class="detail-dialog-header">
+        <h3 class="h3" id="detail-title"></h3>
+        <form method="dialog">
+          <button type="submit" class="detail-close" aria-label="Fermer" autofocus>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </form>
+      </header>
+      <p class="detail-meta"></p>
+      <p class="detail-description"></p>
+      <img class="detail-preview" alt="" />
+      <a class="detail-original" target="_blank" rel="noopener" hidden>Ouvrir l’image en taille réelle</a>
+    </dialog>
 
     <!--
     - custom js link
