@@ -204,7 +204,7 @@ detailDialog.addEventListener("click", event => {
   }
 });
 
-// The market-inspired graphic follows fine pointers within the hero.
+// The stack diagram follows fine pointers within the hero.
 const hero = document.querySelector("[data-hero]");
 const reactiveMotion = window.matchMedia("(min-width: 641px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)");
 let pointerFrame = 0;
